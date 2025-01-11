@@ -1,5 +1,5 @@
 import React from 'react';
-import Nav from '../component/jsx/navbar.jsx';
+import Nav from '../component/navbar.jsx';
 
 function Blog() {
   return <>
