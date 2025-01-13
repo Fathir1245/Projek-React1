@@ -5,7 +5,7 @@ import App from './pages/App';
 import Layanan from './pages/Layanan';
 import Tentang from './pages/Tentang';
 import Blog from './pages/Blog';
-import './App.css';
+
 
 const container = document.getElementById('root');
 const root = createRoot(container);
