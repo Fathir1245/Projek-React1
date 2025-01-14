@@ -11,6 +11,8 @@ import image10 from './image10.png';
 import image11 from './image11.jpeg';
 import image12 from './image12.jpeg';
 import image13 from './image13.jpeg';
+import image14 from './image14.jpeg';
+import image15 from './image15.jpeg';
 // Add more images as needed
 
 const images = [
@@ -27,6 +29,8 @@ const images = [
     image11,
     image12,
     image13,
+    image14,
+    image15,
 ];
 
 export default images;
