@@ -3,6 +3,7 @@ import Nav from '../component/navbar.jsx';
 import Footer from '../component/footer.jsx';
 import '../index.css';
 import images from '../assets/picAdapt';
+import { Link } from 'react-router-dom';
 
 
 function App() {
@@ -114,21 +115,18 @@ function App() {
       description: "Jika sehari-hari anda bekerja sebagai pengepul/tukang loak, menjadikan pekerjaan tersebut sebagai profesi utama atau sampingan, bergabunglah dengan SampahKita untuk meningkatkan pemasukan anda, serta meningkatkan efektifatas kerja dan kualitas hidup anda.",
       image: images[4],
       buttonText: "Gabung",
-      buttonLink: "#"
     },
     {
       title: "Pendaur",
       description: "Jika anda memiliki minat dalam mendaur ataupun menciptakan karya dengan cara mendaur sampah maka jadilah bagian dari SampahKita dan nikmati akses luas ke berbagai peluang baru! Dengan mendaur ulang bersama kami, kamu bisa mengubah limbah menjadi sumber penghasilan yang berkelanjutan, sekaligus membuat bumi kita lebih sehat dan bersih.",
       image: images[5],
       buttonText: "Gabung",
-      buttonLink: "#"
     },
     {
       title: "Bank Sampah",
       description: "Bank sampah dapat menjadi mitra SampahKita untuk membantu proses pengumpulan atau penjualan kembali sampah daur ulang. Apapun level Bank sampah anda, mulai dari Bank sampah unit, sampai bank sampah pusat, anda bisa bergabung di SampahKita untuk mendapat akses lebih luas terhadap nasabah bank sampah anda.",
       image: images[6],
       buttonText: "Gabung",
-      buttonLink: "#"
     }
   ];
 
@@ -145,7 +143,7 @@ function App() {
               <span>{item.description}</span>
             </div>
             <div className="w-1.5/12 bg-gray-800 text-white p-4 rounded-2xl font-semibold text-[2rem] hover:bg-[#D9D9D9] hover:border-4 hover:border-gray-800 hover:text-gray-800">
-              <button><a href={item.buttonLink}>{item.buttonText}</a></button>
+              <button><Link to="/Gabung">{item.buttonText}</Link></button>
             </div>
           </div>
         ))}
@@ -158,7 +156,7 @@ function App() {
           <div className="flex flex-col p-4 w-[20rem] items-center">
             <h3 className="text-2xl font-semibold mb-2 text-black">{item.title}</h3>
             <p className="text-gray-700 mb-4">{item.description}</p>
-            <a href={item.buttonLink} className="bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-[#D9D9D9] hover:text-gray-800">{item.buttonText}</a>
+            <Link to="/Gabung" className="bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-[#D9D9D9] hover:text-gray-800">{item.buttonText}</Link>
           </div>
         </div>
       ))}

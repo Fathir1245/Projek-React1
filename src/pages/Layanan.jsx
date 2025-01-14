@@ -2,9 +2,10 @@ import React from 'react';
 import Nav from '../component/navbar.jsx';
 import Footer from '../component/footer.jsx';
 import image from '../assets/picAdapt';
+import { Link } from 'react-router-dom';
 
 function Layanan() {
-  return <div className="bg-[#d8e8d9] text-gray-100">
+  return <div className="bg-[#E2F1E7] text-gray-100">
     <Nav />
     <Main />
     <Footer />
@@ -36,20 +37,25 @@ function Layanan() {
     return(
     <>
     <div className="mt-[5rem] flex justify-around mx-4">
-      <div className="bg-gray-800 w-[20rem] h-[10rem] shadow-2xl p-6 rounded-[1.5rem] cursor-pointer transform transition duration-300 hover:scale-105 hover:translate-y-[-10px] hover:shadow-3xl">          <h3 className="text-gray-100 font-semibold">Tukarkan Sampah</h3>
-        <div className="flex justify-around">
-          <img src={image[9]} alt="image" className="w-[5.8rem] rounded-full shadow-2xl" />
+      <Link to="/TukarSampah">      
+        <div className="bg-gray-800 w-[20rem] h-[10rem] shadow-2xl p-6 rounded-[1.5rem] cursor-pointer transform transition duration-300 hover:scale-105 hover:translate-y-[-10px] hover:shadow-3xl">          
+          <h3 className="text-gray-100 font-semibold">Tukarkan Sampah</h3>
+          <div className="flex justify-around">
+            <img src={image[9]} alt="image" className="w-[5.8rem] rounded-full shadow-2xl" />
             <p className="mt-2 text-gray-100">Tukarkan sampah menjadi uang</p>
-            </div>
           </div>
-          <div className="bg-gray-800 w-[20rem] h-[10rem] shadow-2xl p-6 rounded-[1.5rem] cursor-pointer transform transition duration-300 hover:scale-105 hover:translate-y-[-10px] hover:shadow-3xl">
-            <h3 className="text-gray-100 font-semibold">Pasar Daur</h3>
-            <div className="flex justify-around">
-              <img src={image[8]} alt="image" className="bg-white w-20 rounded-full shadow-2xl" />
-              <p className="mt-2 text-gray-100">Marketplace Karya <br />Daur Ulang</p>
-            </div>
         </div>
-      </div>
+      </Link>
+      <Link to="/PasarDaur">
+        <div className="bg-gray-800 w-[20rem] h-[10rem] shadow-2xl p-6 rounded-[1.5rem] cursor-pointer transform transition duration-300 hover:scale-105 hover:translate-y-[-10px] hover:shadow-3xl">
+          <h3 className="text-gray-100 font-semibold">Pasar Daur</h3>
+          <div className="flex justify-around">
+            <img src={image[8]} alt="image" className="bg-white w-20 rounded-full shadow-2xl" />
+            <p className="mt-2 text-gray-100">Marketplace Karya <br />Daur Ulang</p>
+          </div>
+        </div>
+      </Link>
+    </div>
     </>
     )
   };

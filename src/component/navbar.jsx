@@ -9,6 +9,8 @@ function Nav() {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
+  const isLoginPage = location.pathname === '/login';
+
   return (
     <nav className='flex justify-center text-xl font-semibold bg-[#243642] px-4 p-4 md:px-12 sticky top-0 z-10'>
       <Link to="/" className="flex justify-center items-center mr-auto text-[#f0f0f0] space-x-2 mb:justify-center">
@@ -33,7 +35,9 @@ function Nav() {
           <Link to="/blog" className="block text-[#f0f0f0] no-underline hover:underline p-2">Blog</Link>
         </div>
       )}
-      <Link to="#login" className="bg-[#d1d1d1] text-[#333] px-4 py-2 ml-4 rounded-full border-2 border-[#d1d1d1] no-underline hover:bg-[#333] hover:text-[#f0f0f0]">Login</Link>
+      <Link to={isLoginPage ? "/register" : "/login"} className="bg-[#D9D9D9] text-[#333] px-5 pt-1 pb-2 self-center ml-4 rounded-full border-2 border-[#D9D9D9] no-underline hover:bg-[#243642] hover:text-[#f0f0f0]">
+        {isLoginPage ? "Register" : "Login"}
+      </Link>
     </nav>
   );
 }

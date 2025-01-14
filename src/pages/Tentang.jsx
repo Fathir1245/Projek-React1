@@ -3,7 +3,7 @@ import Nav from '../component/navbar.jsx';
 import Footer from '../component/footer.jsx';
 
 function Tentang() {
-  return <div className="bg-[#d8e8d9] text-gray-100">
+  return <div className="bg-[#E2F1E7] text-gray-100">
     <Nav />
     <Main />
     <Footer />
